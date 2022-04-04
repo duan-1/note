@@ -30,3 +30,38 @@ git config --global init.defaultBranch <名称>
 ```bash
 git config -l / --List
 ```
+
+### 配置密钥
+
+参见 Github 官方文档，[Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+Linux 环境下需要将私钥添加到 ssh-agent，可以使用如下命令：
+
+```bash
+ssh-add ~/.ssh/example
+```
+
+但是每次重新启动时就需要重新添加一次，则可以修改文件`~/.ssh/config`（没有可以自行创建），向其中添加以下内容即可。
+
+```text
+#github
+Host github.com
+Hostname github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/github
+```
+
+## 命令说明
+
+### init
+
+将当前目录作为仓库初始化，使用示例：
+
+```bash
+git init
+```
+
+## 小技巧
+
+- 在 Github 添加过密钥后，使用 ssh 方式与仓库进行通信就不会像 HTTPS 那样每次操作都需要输入密码。
+  
