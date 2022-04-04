@@ -21,7 +21,7 @@
 
 ## 设置 PicGo
 
-### 1. 获取 APPID 、SecretId 和 SecretKey 。
+### 1. 获取 APPID 、SecretId 和 SecretKey
 
 在左边菜单栏点击 [`密钥管理`](https://console.cloud.tencent.com/cam/capi) 或是直接点击跳转，如下图所示。
 
@@ -31,11 +31,11 @@
 
 打开存储桶列表，存储桶名称 `bucket-xxxx` 即为存储空间名，所属地域后面的 `xx-xxxx` 即为储存区域。
 
-### 3. 将参数填入 PicGo 
+### 3. 将参数填入 PicGo
 
 没有明确的 v4 标志就说明版本为 v5，以及在本文发布时创建对象存储以及为 v5 版本。设置完成后，就拥有了自己的图床啦！如果想要了解指定存储路径和设定自定义域名请继续往后面看。
 
-![](https://img.secretbase.cn/img/20220322-picgosetting.png)
+![参数设置](https://img.secretbase.cn/img/20220322-picgosetting.png)
 
 ## 拓展阅读
 
