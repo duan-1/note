@@ -61,6 +61,18 @@ IdentityFile ~/.ssh/github
 git init
 ```
 
+## Git 工具
+
+### submodule
+
+子模块，将一个 Git 仓库作为另一个 Git 仓库的子目录，同时保持两个仓库提交的独立。
+
+```bash
+git submodule add git@github.com:xxx/xxx
+```
+
+在主目录中，Git 不会跟踪子模块的提交内容，而是看做子模块仓库的具体某个提交。在主目录推送更改时，不会推送字母的内容，而是推送为一个指向子模块仓库的 url。
+
 ## 小技巧
 
 - 在 Github 添加过密钥后，使用 ssh 方式与仓库进行通信就不会像 HTTPS 那样每次操作都需要输入密码。
